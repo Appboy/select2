@@ -18,7 +18,7 @@ define([
     $selection.html(
       '<span class="select2-selection__rendered"></span>' +
       '<span class="select2-selection__arrow" role="presentation">' +
-        '<b role="presentation"></b>' +
+        '<i class="fa fa-angle-down"></i>' +
       '</span>'
     );
 

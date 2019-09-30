@@ -355,6 +355,14 @@ define([
 
       $next.trigger('mouseenter');
 
+      if (self.$results.offset() === null || self.$results.offset() === undefined) {
+        return;
+      }
+
+      if ($next.offset() === null || $next.offset() === undefined) {
+        return;
+      }
+
       var currentOffset = self.$results.offset().top;
       var nextTop = $next.offset().top;
       var nextOffset = self.$results.scrollTop() + (nextTop - currentOffset);
@@ -383,6 +391,14 @@ define([
       var $next = $options.eq(nextIndex);
 
       $next.trigger('mouseenter');
+
+      if (self.$results.offset() === null || self.$results.offset() === undefined) {
+        return;
+      }
+
+      if ($next.offset() === null || $next.offset() === undefined) {
+        return;
+      }
 
       var currentOffset = self.$results.offset().top +
         self.$results.outerHeight(false);
