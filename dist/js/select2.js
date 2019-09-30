@@ -1132,6 +1132,14 @@ S2.define('select2/results',[
 
       $next.trigger('mouseenter');
 
+      if (self.$results.offset() === null || self.$results.offset() === undefined) {
+        return;
+      }
+
+      if ($next.offset() === null || $next.offset() === undefined) {
+        return;
+      }
+
       var currentOffset = self.$results.offset().top;
       var nextTop = $next.offset().top;
       var nextOffset = self.$results.scrollTop() + (nextTop - currentOffset);
@@ -1160,6 +1168,14 @@ S2.define('select2/results',[
       var $next = $options.eq(nextIndex);
 
       $next.trigger('mouseenter');
+
+      if (self.$results.offset() === null || self.$results.offset() === undefined) {
+        return;
+      }
+
+      if ($next.offset() === null || $next.offset() === undefined) {
+        return;
+      }
 
       var currentOffset = self.$results.offset().top +
         self.$results.outerHeight(false);
@@ -1504,7 +1520,7 @@ S2.define('select2/selection/single',[
     $selection.html(
       '<span class="select2-selection__rendered"></span>' +
       '<span class="select2-selection__arrow" role="presentation">' +
-        '<b role="presentation"></b>' +
+        '<i class="fa fa-angle-down"></i>' +
       '</span>'
     );
 
